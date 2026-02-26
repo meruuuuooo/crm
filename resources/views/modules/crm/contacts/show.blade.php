@@ -1,4 +1,4 @@
-<x-layouts::app :title="{{ $contact->first_name }} {{ $contact->last_name }}">
+<x-layouts::app :title="$contact->first_name . ' ' . $contact->last_name">
     <div class="mx-auto max-w-4xl space-y-6">
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
