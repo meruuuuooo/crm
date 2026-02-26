@@ -16,16 +16,70 @@
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
                 </flux:sidebar.group>
+
+                <flux:sidebar.group heading="CRM" class="grid">
+                    <flux:sidebar.item icon="building-office-2" :href="route('crm.companies.index')" :current="request()->routeIs('crm.companies.*')" wire:navigate>
+                        {{ __('Companies') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="users" :href="route('crm.contacts.index')" :current="request()->routeIs('crm.contacts.*')" wire:navigate>
+                        {{ __('Contacts') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="funnel" :href="route('crm.leads.index')" :current="request()->routeIs('crm.leads.*')" wire:navigate>
+                        {{ __('Leads') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="currency-dollar" :href="route('crm.deals.index')" :current="request()->routeIs('crm.deals.*')" wire:navigate>
+                        {{ __('Deals') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="arrows-right-left" :href="route('crm.pipelines.index')" :current="request()->routeIs('crm.pipelines.*')" wire:navigate>
+                        {{ __('Pipelines') }}
+                    </flux:sidebar.item>
+                </flux:sidebar.group>
+
+                <flux:sidebar.group heading="Work" class="grid">
+                    <flux:sidebar.item icon="briefcase" :href="route('crm.projects.index')" :current="request()->routeIs('crm.projects.*')" wire:navigate>
+                        {{ __('Projects') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="check-badge" :href="route('crm.tasks.index')" :current="request()->routeIs('crm.tasks.*')" wire:navigate>
+                        {{ __('Tasks') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="calendar" :href="route('crm.activities.index')" :current="request()->routeIs('crm.activities.*')" wire:navigate>
+                        {{ __('Activities') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="megaphone" :href="route('crm.campaigns.index')" :current="request()->routeIs('crm.campaigns.*')" wire:navigate>
+                        {{ __('Campaigns') }}
+                    </flux:sidebar.item>
+                </flux:sidebar.group>
+
+                <flux:sidebar.group heading="Finance" class="grid">
+                    <flux:sidebar.item icon="document-text" :href="route('crm.proposals.index')" :current="request()->routeIs('crm.proposals.*')" wire:navigate>
+                        {{ __('Proposals') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="clipboard-document-check" :href="route('crm.contracts.index')" :current="request()->routeIs('crm.contracts.*')" wire:navigate>
+                        {{ __('Contracts') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="calculator" :href="route('crm.estimations.index')" :current="request()->routeIs('crm.estimations.*')" wire:navigate>
+                        {{ __('Estimations') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="banknotes" :href="route('crm.invoices.index')" :current="request()->routeIs('crm.invoices.*')" wire:navigate>
+                        {{ __('Invoices') }}
+                    </flux:sidebar.item>
+                </flux:sidebar.group>
+
+                <flux:sidebar.group heading="Insights" class="grid">
+                    <flux:sidebar.item icon="chart-bar" :href="route('crm.reports.index')" :current="request()->routeIs('crm.reports.*')" wire:navigate>
+                        {{ __('Reports') }}
+                    </flux:sidebar.item>
+                </flux:sidebar.group>
             </flux:sidebar.nav>
 
             <flux:spacer />
 
             <flux:sidebar.nav>
-                <flux:sidebar.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
+                <flux:sidebar.item icon="code-bracket-square" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
                     {{ __('Repository') }}
                 </flux:sidebar.item>
 
-                <flux:sidebar.item icon="book-open-text" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
+                <flux:sidebar.item icon="book-open" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
                     {{ __('Documentation') }}
                 </flux:sidebar.item>
             </flux:sidebar.nav>
